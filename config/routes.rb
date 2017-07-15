@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'pages#home'
+
+  post 'polling_start', to: 'hoges#start'
+  get  'fetch', to: 'hoges#fetch'
 end
