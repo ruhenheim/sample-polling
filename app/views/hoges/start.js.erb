@@ -1,0 +1,31 @@
+var btn, fetch, fetchInterval, startPolling;
+
+btn = document.getElementById('polling');
+btn.value = 'working...';
+btn.disabled = true;
+
+startPolling = function() {
+  fetchInterval();
+};
+
+fetchInterval = function() {
+  fetch();
+  setTimeout(fetchInterval(), 5000);
+};
+
+fetch = function() {
+  $.ajax({
+    url: '/fetch',
+    type: 'GET',
+    dataType: 'JS',
+    success: function(post) {
+      console.log("polling");
+      if (post && post.scraping_completed == true) {
+        btn.value = 'completed!';
+        return btn.disabled = false;
+      }
+    }
+  });
+};
+
+startPolling();

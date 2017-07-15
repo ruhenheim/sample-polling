@@ -1,0 +1,11 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<hr>
+
+<h2>スクレイピング開始(=ポーリング開始)</h2>
+<p>そのトリガーを試しにajaxでやってみる↓</p>
+
+<%= form_for(Post.new, url: polling_start_path, remote: true) do |f| %>
+  <%= f.submit 'Start', id: 'polling' %>
+<% end %>
