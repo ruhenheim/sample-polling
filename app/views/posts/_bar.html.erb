@@ -1,0 +1,8 @@
+<div class="polling-placeholder">
+  <div id="post_<%= post.id %>" class="object" data-poll="<%= !post.scraping_completed? %>" data-url="<%= post_path(post, partial: "bar") %>" data-interval="3000">
+    <h3>ポスト状況</h3>
+    <p>
+      <%= post.scraping_completed? ? '完了!' : '実行中...' %>
+    </p>
+  </div>
+</div>

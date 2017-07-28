@@ -23,9 +23,16 @@ fetch = function() {
       if (post && post.scraping_completed == true) {
         btn.value = 'completed!';
         return btn.disabled = false;
+        // ループ終わる＆画面にスクレイピング結果を出す
+        // アカウント登録エラー
+        // 現在の預貯金額
+        if post.redirect_url
+          href = post.redirect_url
       }
     }
   });
 };
 
-startPolling();
+if (true) {
+  startPolling();
+}

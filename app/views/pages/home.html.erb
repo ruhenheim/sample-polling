@@ -1,4 +1,4 @@
-<h1>Pages#home</h1>
+<!-- <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <hr>
@@ -8,4 +8,10 @@
 
 <%= form_for(Post.new, url: polling_start_path, remote: true) do |f| %>
   <%= f.submit 'Start', id: 'polling' %>
-<% end %>
+<% end %> -->
+
+<div class="polling-placeholder">
+  <div id="post_1" class="object" data-poll="true" data-url="/posts/1?partial=bar" data-interval="500">
+    <p>Hello World</p>
+  </div>
+</div>
